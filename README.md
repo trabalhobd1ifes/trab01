@@ -1,4 +1,4 @@
-# TRABALHO 01:  sistema de controle e gestão no setor alimenticio 
+# TRABALHO 01:  SISTEMA DE GESTÃO PARA MICROEMPREENDEDORES NO SETOR ALIMENTÍCIO 
 Trabalho desenvolvido durante a disciplina de BD1
 
 # Sumário
