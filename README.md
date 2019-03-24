@@ -1,4 +1,4 @@
-# TRABALHO 01:  Título do Trabalho
+# TRABALHO 01:  sistema de controle e gestão no setor alimenticio 
 Trabalho desenvolvido durante a disciplina de BD1
 
 # Sumário
