@@ -5,8 +5,10 @@ Trabalho desenvolvido durante a disciplina de BD1
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-primeiro_componente_do_grupo:email_primeiro_componente@dominio.com<br>
-segundo_componente_do_grupo:email_segundo_componente@dominio.com<br>
+Antonio Felipe: antoniofelipegavazza@gmail.com<br>
+Bruno Vicente: brunovn2009@gmail.com<br>
+Francisco Guilherme: franciscoguilherme.v@gmail.com<br> 
+Thainara Amaral: thainara.estudos@gmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
