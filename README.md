@@ -11,7 +11,7 @@ Trabalho desenvolvido durante a disciplina de BD1
 - Thainara Amaral: thainara.estudos@gmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
-Este documento contém a especificação do projeto do banco de dados **_“SUMEI” - Sistema Unificado para Microempreendedor Individual e motivação da escolha realizada._** <br>
+Este documento contém a especificação do projeto do banco de dados **_“SUMEI” - Sistema Unificado para Microempreendedor Individual_** e motivação da escolha realizada. <br>
 
 > O grupo “FABT Projetos” visa colaborar com o desenvolvimento de projetos para atender uma demanda na sociedade que está começando um empreendimento. Sabendo que, segundo o SEBRAE, 80% das microempresas fecham as portas em menos de 2 anos por descuido com as finanças, garantia de sustentabilidade do negócio e falta de preparo para a rotina do negócio, o grupo “FABT Projetos” propõem um sistema unificado onde o microempreendedor terá nas palmas das mãos todo o controle do seu negócio, desde  gestão dos clientes, pedidos, custo e lucro até fornecedores, matéria prima e funcionários.
  
