@@ -14,7 +14,7 @@ Thainara Amaral: thainara.estudos@gmail.com<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
 <br>e motivação da escolha realizada. <br>
 
-> A empresa "Devcom Projetos" visa colaborar com desenvolvimento de projetos para uma sociedade melhor. Sabendo-se dos desafios para gerenciar projetos dentro de uma empresa e visando unir as informações relativas a funcionários, departamentos e projetos em um mesmo local, ficamos motivados com o desenvolvimento deste sistema. O Sistema "Devcom" tem como objetivo gerenciar todas as informações ao desenvolvimento das atividades de projetos em diversas localidades do país. Para realizar suas operações adequadamente e empresa necessita que sistema que armazene informações relativas aos Projetos, Departamentos e Empregados, além de também armazenar dados sobre  Dependentes e Históricos de Salário dos empregados. O sistema deverá gerar um conjunto de relatórios que por sua vez atenderá os anseios da empresa em questão.
+> O grupo “FABT Projetos” visa colaborar com o desenvolvimento de projetos para atender uma demanda na sociedade que está começando um empreendimento. Sabendo que, segundo o SEBRAE, 80% das microempresas fecham as portas em menos de 2 anos por descuido com as finanças, garantia de sustentabilidade do negócio e falta de preparo para a rotina do negócio, o grupo “FABT Projetos” propõem um sistema unificado onde o microempreendedor terá nas palmas das mãos todo o controle do seu negócio, desde  gestão dos clientes, pedidos, custo e lucro até fornecedores, matéria prima e funcionários.
  
 
 ### 3.MINI-MUNDO Novo<br>
