@@ -1,4 +1,4 @@
-# TRABALHO 01:  SISTEMA DE GESTÃO PARA MICROEMPREENDEDORES NO SETOR ALIMENTÍCIO 
+# TRABALHO 01:  PROJETO “SUMEI” - Sistema Unificado para Microempreendedor Individual.
 Trabalho desenvolvido durante a disciplina de BD1
 
 # Sumário
