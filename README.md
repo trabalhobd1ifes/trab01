@@ -85,7 +85,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 ![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/logico_versao_final.png)
 
 ### 7	MODELO FÍSICO<br>
-![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/script_final.sql)
+https://github.com/trabalhobd1ifes/trab01/blob/master/script_final.sql
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
