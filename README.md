@@ -82,7 +82,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 
 ### 6	MODELO LÓGICO<br>
-https://github.com/trabalhobd1ifes/trab01/blob/master/logico_versao_final.png
+ (https://github.com/trabalhobd1ifes/trab01/blob/master/logico_versao_final.png)
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas DDL 
