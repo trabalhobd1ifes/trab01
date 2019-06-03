@@ -63,7 +63,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 ### 5.MODELO CONCEITUAL<br>
 
-![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/print_conceitual_final.PNG) 
+![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/img_conceitual_ultimato.PNG) 
     
 #### 5.1 Validação do Modelo Conceitual
     [Grupo01]: [Nomes dos que participaram na avaliação]
@@ -87,15 +87,15 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 
 ### 6	MODELO LÓGICO<br>
-![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/logico_versao_final.png)
+![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/Logico_endgame.png)
 
 ### 7	MODELO FÍSICO<br>
-https://github.com/trabalhobd1ifes/trab01/blob/master/script_final.sql
-        
+https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
         a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico 
         b) formato .SQL
+        https://github.com/trabalhobd1ifes/trab01/blob/master/insert_endgame.sql
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script 
