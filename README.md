@@ -100,6 +100,7 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script 
         (create para tabelas e estruturas de dados + dados a serem inseridos)
+        https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_e_insert_endgame.sql
         b) Criar um novo banco de dados para testar a restauracao 
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL
