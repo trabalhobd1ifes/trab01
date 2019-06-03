@@ -5,7 +5,6 @@ Trabalho desenvolvido durante a disciplina de BD1
 
 ### 1. COMPONENTES<br>
 **Integrantes do grupo**<br>
-- Antonio Felipe: antoniofelipegavazza@gmail.com<br>
 - Bruno Vicente: brunovn2009@gmail.com<br>
 - Francisco Guilherme: franciscoguilherme.v@gmail.com<br> 
 - Thainara Amaral: thainara.estudos@gmail.com<br>
