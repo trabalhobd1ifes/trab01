@@ -83,3 +83,13 @@ where validade_dia = 7;
 select * from pedido
 INNER JOIN status ON pedido.fk_status_id = status.id
 where nome = 'encomenda';
+
+/*relatorio de vendas*/
+
+/*relatórios de pedidos encomedados*/
+
+/*relatorio dos ingredientes mais usados*/
+
+/*relatorio de validade dos produtos*/
+
+/*relatorio semanal de gastos com ingredientes*/
