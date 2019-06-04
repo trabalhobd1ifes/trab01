@@ -69,8 +69,24 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 DECISÕES DE PROJETO
-    [atributo]: [descrição da decisão]
-    
+    [FUNCIONÁRIO]: Realiza as transações de pedido no sistema.
+    [TIPO FUNCIONÁRIO]: Atribui acesso à determinadas tarefas no sistema.
+    [ENCOMENDA]: Pedido realizado pelo cliente e suas anotações.
+    [CLIENTE]: Realizará pedidos, comprará produtos e solicitará personalizações.
+    [PRODUTO]: O que será comercializado.
+    [TIPO PRODUTO]: Tipo de produto
+    [DECORAÇÃO FINAL]: Acabamento dos produtos.
+    [DECORAÇÃO FINAL PERSONALIZADA]: Acabamento dos produtos solicitados pelo cliente.
+    [PRODUÇÃO DIÁRIA]: Lista de produtos disponíveis/finalizados no estoque/dia.
+    [RECEITA]: Lista de ingredientes e Modo de preparo dos produtos.
+    [INGREDIENTE]: será utilizado na produção de produto e forma o estoque.
+    [ESTOQUE]: Contém os ingredientes necessários para a produção das receitas.
+    [FORNECEDOR]: Fornece os ingredientes/artefatos/matéria prima necessários para a confecção do produto.
+    [ENDEREÇO]: Localização das pessoas que integram o sistema.
+    [BAIRRO]: 
+    [CIDADE]:
+    [ESTADO]: 
+    [PAÍS]: 
     EXEMPLO:
     a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa 
     pode possuir para cada departamento mais de uma localização... 
