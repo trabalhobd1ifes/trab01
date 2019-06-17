@@ -18,11 +18,11 @@ INSERT INTO  endereco  ( id ,  logradouro ,  CEP ,  numero ,  ponto_referencia ,
 VALUES ('6', 'rua dos anjos', '29160788', '130', 'rua do bar do seu ze', '1'), 
 ('7', 'avenida principal', '000987564', '1-f', 'ao lado dos correios', '2'), 
 ('8', 'avenida do pedrinho', '184390267', '9-b', 'em frente a padaria da lola', '3'), 
-('9', 'rua do amor', '189036728', '150', 'atras do coleigio zezinho', '4'), 
+('9', 'rua do amor', '18903348', '120', 'atras do coleigio zezinho', '4'), 
 ('10', 'avenida avenidona', '28109258', '50-c', 'em frente ao buteco copo sujo', '5'),
 ('11', 'rua do leite', '189036728', '150', 'nem o uber aguenta és', '6'), 
-('12', 'rua do trigo', '189036728', '150', 'entre a rua 1 e a 3 mas não é a 2', '7'), 
-('13', 'rua do doce', '189036728', '150', 'atras da rua da frente', '8');
+('12', 'rua do trigo', '189098728', '140', 'entre a rua 1 e a 3 mas não é a 2', '7'), 
+('13', 'rua do doce', '189036446', '10', 'atras da rua da frente', '8');
 
 INSERT INTO  pessoa  ( id ,  nome ,  sexo ,  CPF ,  data_nasc ,  fk_contato_id ,  fk_endereco_id )
 VALUES ('6', 'Francisco', 'M', '192829394', '1991-05-31', '5', '10'), 
@@ -149,44 +149,37 @@ select * from contato where email like '%gmail.com%';
 /*9.5   ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)*/
 
 /*- alterar numero de telefone, email e endereço*/
-select * from contato;
 UPDATE contato
 SET email = "pedro@gmail.com",instagram = "@pedrinho_legal"
 WHERE id = 3;
-select * from contato;
+
 
 /*- alterar numero de telefone, email e endereço*/
-select * from contato;
 UPDATE contato
 SET instagram = "sem cadastro"
 WHERE instagram is null;
-select * from contato;
+
 
 /*- alterar numero de telefone, email e endereço*/
-select * from contato;
 UPDATE contato
 SET facebook = "sem cadastro"
 WHERE facebook is null;
-select * from contato;
 
 /*- alterar numero de telefone, email e endereço*/
-select * from pessoa;
 UPDATE pessoa
 SET cpf = "0"
 WHERE cpf is null;
-select * from pessoa;
+
 /*- alterar valores de venda e custo de produtos*/
-select * from produto;
 UPDATE produto
 SET valor_venda = 65, custo = 55
 WHERE valor_venda = 50;
-select * from produto;
+
 /*- alterar encomenda/personalização*/
-select * from DECORACAO;
 UPDATE DECORACAO
 SET descricao = "recheio de nozes, com cobertura de brigadeiro vegano"
 WHERE id = 2;
-select * from decoracao;
+
 
 /*- exluir produto atrasados */
 
@@ -205,15 +198,38 @@ select * from contato;*/
 
 
 /*exibe fornecedor e seus email comercial*/
-SELECT fornecedor.id as 'Código do fornecedor', fornecedor.nome as 'Fornecedor', contato.tel_fixo as telefone, contato.email as 'email comercial', endereco.logradouro as rua
+SELECT fornecedor.id as 'Código do fornecedor', fornecedor.nome as 'Fornecedor', fornecedor.cnpj, contato.tel_fixo as telefone, contato.email as 'email comercial', endereco.logradouro as rua
 FROM fornecedor, contato, endereco
 WHERE fornecedor.fk_contato_id = contato.id and fornecedor.fk_endereco_id = endereco.id;
 
-
-
+/*mostra todos os pedidos acima de determinado valor, neste exemplo valorias iguais ou acima de 150*/
+SELECT pessoa.NOME as 'cliente', pedido.id as 'nº do pedido', pedido.valor
+FROM pedido, pessoa, funcionario
+WHERE pessoa.id = pedido.fk_pessoa_id AND PEDIDO.VALOR >= 150.00;
 
 /*9.7   CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)*/
 
+/*consulta pessoa e seu cpf*/
+SELECT nome, CPF
+FROM pessoa
+GROUP BY nome, CPF;
+
+/*consulta cep e nome da rua*/
+SELECT cep, logradouro as 'nome da rua'
+FROM endereco
+GROUP BY cep, logradouro;
+
+/*conta a quantidade de pedidos por pessoa*/
+SELECT pessoa.nome, COUNT(pedido.Id) as 'quantidade de pedidos'
+FROM pedido, pessoa
+where pessoa.id = pedido.fk_pessoa_id
+GROUP BY fk_pessoa_id
+
+/*mostra o valor total dos pedidos de cada cliente*/
+SELECT pessoa.nome, SUM(pedido.valor) as 'valor dos pedidos'
+FROM pessoa, pedido
+where pedido.fk_pessoa_id = pessoa.id
+group BY pessoa.nome
 
 /*9.8   CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)*/
 
