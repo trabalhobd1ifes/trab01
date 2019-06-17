@@ -41,10 +41,29 @@ VALUES ('100', '4', '2019-05-15', NULL, '2019-06-05','2', '5', '5', '1'),
 ('150', '10', '2017-06-01', NULL, NULL,'6', '8', '2', '1'),
 ('150', '11', '2017-06-01', NULL, NULL,'6', '10', '2', '1');
 
+INSERT INTO  item_pedido_contem  ( id ,  fk_decoracao_id ,  fk_status_id ,  fk_produto_id ,  fk_pedido_id ) 
+VALUES ('3', '1', '3', '3', '5'), 
+('4', '2', '4', '2', '2'), 
+('5', '1', '2', '3', '3'), 
+('6', '2', '5', '2', '5');
+
 INSERT INTO  fornecedor  ( id ,  nome ,  CNPJ ,  fk_endereco_id ,  fk_contato_id ) 
 VALUES ('11', 'tião leiteiro', '534688464', '1', '4'),
 ('12', 'atacadão da ana', '534688464', '3', '4'),  
 ('13', 'casa dos doces', '468453453', '5', '1');
+
+INSERT INTO   ingrediente_marca_tem  ( id, fk_marca_id  , fk_ingrediente_id) 
+VALUES ('10','3', '4'), 
+('6','2', '3'), 
+('7','3', '1'), 
+('8','4', '5'), 
+('9','2', '2');
+
+INSERT INTO  ingrediente_fornecimento  ( fk_ingrediente_id ,  fk_fornecedor_id ,  id ) 
+VALUES ('3', '11', '6'), 
+('2', '12', '7'), 
+('4', '13', '8');
+
 
 /*9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)*/ 
 select * from pessoa;
@@ -165,20 +184,24 @@ UPDATE contato
 SET facebook = "sem cadastro"
 WHERE facebook is null;
 
+select * from contato;
+
 /*- alterar numero de telefone, email e endereço*/
 UPDATE pessoa
 SET cpf = "0"
 WHERE cpf is null;
-
+select * from pessoa;
 /*- alterar valores de venda e custo de produtos*/
 UPDATE produto
 SET valor_venda = 65, custo = 55
 WHERE valor_venda = 50;
+select * from produto;
 
 /*- alterar encomenda/personalização*/
 UPDATE DECORACAO
 SET descricao = "recheio de nozes, com cobertura de brigadeiro vegano"
 WHERE id = 2;
+select * from decoracao;
 
 
 /*- exluir produto atrasados */
@@ -186,9 +209,6 @@ WHERE id = 2;
 /*excluir fornecedor*/
 
 /*- excluir encomendas finalizadas
-DELETE FROM nome_tabela
-WHERE condição9;
-select * from contato;*/
 
 /*9.6   CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)*/
 
@@ -196,8 +216,7 @@ select * from contato;*/
 
 /* b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho*/
 
-
-/*exibe fornecedor e seus email comercial*/
+/*exibe fornecedor e seus informações de contato*/
 SELECT fornecedor.id as 'Código do fornecedor', fornecedor.nome as 'Fornecedor', fornecedor.cnpj, contato.tel_fixo as telefone, contato.email as 'email comercial', endereco.logradouro as rua
 FROM fornecedor, contato, endereco
 WHERE fornecedor.fk_contato_id = contato.id and fornecedor.fk_endereco_id = endereco.id;
@@ -223,13 +242,24 @@ GROUP BY cep, logradouro;
 SELECT pessoa.nome, COUNT(pedido.Id) as 'quantidade de pedidos'
 FROM pedido, pessoa
 where pessoa.id = pedido.fk_pessoa_id
-GROUP BY fk_pessoa_id
+GROUP BY fk_pessoa_id;
 
 /*mostra o valor total dos pedidos de cada cliente*/
 SELECT pessoa.nome, SUM(pedido.valor) as 'valor total dos pedidos'
 FROM pessoa, pedido
 where pedido.fk_pessoa_id = pessoa.id
-group BY pessoa.nome
+group BY pessoa.nome;
+
+/*mostra a quantidade de pedidos e valor total dos pedidos de cada cliente*/
+SELECT pessoa.nome, COUNT(pedido.Id) as 'quantidade de pedidos', SUM(pedido.valor) as 'valor total dos pedidos'
+FROM pessoa, pedido
+where pedido.fk_pessoa_id = pessoa.id
+group BY pessoa.nome;
+
+/*mostra todos o valor total dos pedidos do cliente e o quanto ele já pagou*/
+select pedido.id as 'nº do pedido', pessoa.nome as 'cliente', pedido.data_pedido as 'pedido em', pedido.valor as 'valor total', compra_debita.valor_pago as 'valor recebido'
+from pedido, pessoa, compra_debita, compra_forma_pag
+where pessoa.id = pedido.fk_pessoa_id and compra_forma_pag.fk_compra_debita_id = compra_debita.id;
 
 /*9.8   CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)*/
 
