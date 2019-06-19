@@ -445,6 +445,7 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
+Link do slide da apresentação: https://prezi.com/view/SwY6QrNtQ0YuKlqOXBct/ 
 
 ### 11 Backup completo do banco de dados postgres 
     a) deve ser realizado no formato "backup" 
