@@ -69,80 +69,80 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 DECISÕES DE PROJETO
-pessoa: id,	nome,	sexo,	CPF,	data de nascimento. Herda informações de contato e endereço através de seus identificadores como chaves estrangeiras.
-funcionario: id, salario,	carga horária,	nome de usuário do sistema e sua	senha. herda dados de pessoa atraves da chave estrangeira fk_pessoa_id.
-tipo_funcionario: id, cargo.
-contato: Informações de contato referente de cada pessoa cadastrada no sistema;
-bairro: o nome da cidade, sua identificação e a cidade em que está localizada;
-cidade: id, nome, estado
-estado: id, nome, sigla, país
-pais: id, nome
-endereco: id,	logradouro,	CEP,	numero,	ponto de referência,	possue o identificador de bairro como chave estrangeira
-fornecedor: id,	nome,	CNPJ, possue como chaves estrangeiras o idetificador de endereço e contato;
-ingrediente: id, preco,	nome,	peso, se relaciona por meio de chaves estrangeiras de identificação da unidade de medida e tipo de ingrediente.
-tipo_ingrediente: id,	nome,	pericividade,    
-rom unid_medida: id, nome
-marca: id,	nome,	linha
-receita: id,	nome,	modo de preparo
-produto: id, nome,	valor de venda,	lucro,	custo,	dias de validade,	peso. se relacionará externamente com a identificação do tipo de produto, identificação de decoração e identificação da unidade de medida.
-pedido: id, valor,	data que o pedido foi realizado, pagamento de	parcela inicia, data de entrega e quantidade. As relações externas se dão pelo identificação de pessoa, status e funcionário.
-tipo_produto: id, nome, linha
-decoracao: id, descrição da decoração, link para imagem
-cor: id, nome.
-item_pedido_contem: id, relações externas, através de chaves estrangeiras, com decoração, status, produto e pedido.
-estoque_disponivel_produzido: id, valor,	data de validade,	data de fabricação,	quantidade,	lote. Suas chaves estrangeiras são o identificadores de pedido e produto.
-compra_debita:	id, numero de parcelas,	data da compra,	valor total,	valor pago,	quantidade, e os identificadores de pessoa e estoque disponível produzido.
-forma_pagamento: id,	nome,	taxa de juros
-status: id, nome
-ramo_atividade: id, nome
-estoque_ingre: id,	quantidade na unidade de medida. Possue ligações externas com o identificador de infregiente_fornecimento e identificação da marca.
-ingrediente_fornecimento: id, relações externas por meio do identificador de ingrediente e fornecedor.
-ingrediente_marca_tem: id. suas ligações externas se dão atraves do identificadores de marca e ingrediente.
-funcionario_tipo_funcionario: id. possue duas chaves estrangeiras, sendo elas o identificadores de funcionário e tipo de funcionário.
-receita_produto: id, fk_receita_id,	fk_produto_id	
-ingrediente_receita: id, quantidade, e	preco_quant_usada. Ligações externas com ingrediente,receita através de seus identificadores únicos.
-decoracao_cor: id, fk_cor_id,	fk_decoracao_id	
-compra_forma_pag: id, suas chaves externa são os identificadores de forma de pagamento e compra debitada.
-atividade_fornecedor: id. suas chaves estrangeiras são o identificador de ramo de atividade e de fornecedor;
+    pessoa: id,	nome,	sexo,	CPF,	data de nascimento. Herda informações de contato e endereço através de seus identificadores como chaves estrangeiras.
+    funcionario: id, salario,	carga horária,	nome de usuário do sistema e sua	senha. herda dados de pessoa atraves da chave estrangeira fk_pessoa_id.
+    tipo_funcionario: id, cargo.
+    contato: Informações de contato referente de cada pessoa cadastrada no sistema;
+    bairro: o nome da cidade, sua identificação e a cidade em que está localizada;
+    cidade: id, nome, estado
+    estado: id, nome, sigla, país
+    pais: id, nome
+    endereco: id,	logradouro,	CEP,	numero,	ponto de referência,	possue o identificador de bairro como chave estrangeira
+    fornecedor: id,	nome,	CNPJ, possue como chaves estrangeiras o idetificador de endereço e contato;
+    ingrediente: id, preco,	nome,	peso, se relaciona por meio de chaves estrangeiras de identificação da unidade de medida e tipo de ingrediente.
+    tipo_ingrediente: id,	nome,	pericividade,    
+    rom unid_medida: id, nome
+    marca: id,	nome,	linha
+    receita: id,	nome,	modo de preparo
+    produto: id, nome,	valor de venda,	lucro,	custo,	dias de validade,	peso. se relacionará externamente com a identificação do tipo de produto, identificação de decoração e identificação da unidade de medida.
+    pedido: id, valor,	data que o pedido foi realizado, pagamento de	parcela inicia, data de entrega e quantidade. As relações externas se dão pelo identificação de pessoa, status e funcionário.
+    tipo_produto: id, nome, linha
+    decoracao: id, descrição da decoração, link para imagem
+    cor: id, nome.
+    item_pedido_contem: id, relações externas, através de chaves estrangeiras, com decoração, status, produto e pedido.
+    estoque_disponivel_produzido: id, valor,	data de validade,	data de fabricação,	quantidade,	lote. Suas chaves estrangeiras são o identificadores de pedido e produto.
+    compra_debita:	id, numero de parcelas,	data da compra,	valor total,	valor pago,	quantidade, e os identificadores de pessoa e estoque disponível produzido.
+    forma_pagamento: id,	nome,	taxa de juros
+    status: id, nome
+    ramo_atividade: id, nome
+    estoque_ingre: id,	quantidade na unidade de medida. Possue ligações externas com o identificador de infregiente_fornecimento e identificação da marca.
+    ingrediente_fornecimento: id, relações externas por meio do identificador de ingrediente e fornecedor.
+    ingrediente_marca_tem: id. suas ligações externas se dão atraves do identificadores de marca e ingrediente.
+    funcionario_tipo_funcionario: id. possue duas chaves estrangeiras, sendo elas o identificadores de funcionário e tipo de funcionário.
+    receita_produto: id, fk_receita_id,	fk_produto_id	
+    ingrediente_receita: id, quantidade, e	preco_quant_usada. Ligações externas com ingrediente,receita através de seus identificadores únicos.
+    decoracao_cor: id, fk_cor_id,	fk_decoracao_id	
+    compra_forma_pag: id, suas chaves externa são os identificadores de forma de pagamento e compra debitada.
+    atividade_fornecedor: id. suas chaves estrangeiras são o identificador de ramo de atividade e de fornecedor;
 
 >## Marco de Entrega 02 em: (17/09/2018)<br>
 #### 5.3 DESCRIÇÃO DOS DADOS 
-pessoa: tabela que armazena dados das pessoas.
-funcionario: Tablela qe armazena informaçoes do funcionáeio e está relacionada à tabela pessoa.
-tipo_funcionario: Identifica o tipo de funcionário, está relacionada a funcionário.
-contato: Informações de contato referente de cada pessoa cadastrada no sistema;
-bairro: o nome da cidade, sua identificação e a cidade em que está localizada;
-cidade: Informações das cidades cadastradas no sistema.
-estado: Armazena os estados(UF) cadastrados no sistema.
-pais: Tabela que armazena todos os países cadastrados.
-endereco: Tabelas com informações de rua das pessoas.
-fornecedor: Esta tabela concentra as informações gerais do fornecedor.
-ingrediente: Tabelas com informaçoes gerais de cada ingrediente utilizado nas receitas.
-tipo_ingrediente: tabale com o tipo de ingrediente. 
-unid_medida: Esta tabela contém as unidades de medidas na utilização de ingredientes para a produção de receitas.
-marca: Armazena as marcas de ingredientes utilizados.
-receita: Armazena o modo de preparo dos pedidos.
-produto: Informações gerais sobre cada produto fabricado/comercializado pela empresa.
-pedido: Esta tabela armazena informações gerais de cada pedido realizado, como o valor, a pessoa que pefiu e o funcionario que efetuou a venda e status.
-tipo_produto: Armazena os tipos/linhas de produtos comercializados.
-decoracao: Esta tabela armazena informações sobre a decoração desejada.
-cor: Tabela que apresenta todas as cores disponíveis/cadastradas no sistema.
-item_pedido_contem: Armazenas informações de decoração das encomendas/pedidos.
-estoque_disponivel_produzido: Tabela que armazena a quantidade de cada produto produzido qu está disponível em estoque.
-compra_debita: Tabela que registra dados de pagamentos efetuados por clientes.
-forma_pagamento: Tabela que apresenta as formas de pagamento disponíveis.
-status: Tabela que contem os estados que os pedidos podem apresentar durante o processo de produção e pedidos realizados.
-ramo_atividade: Tabela que armazena os ramos de atividades dos fornecedores.
-estoque_ingre: Estoque de ingredientes, relaciona o ingrediente e sua quantidade no sistema, além de informações de fornecimento e marca.
-ingrediente_fornecimento: Relaciona o ingrediente com o fornecedor.
-ingrediente_marca_tem: Relaciona os igredientes e suas marcas/produtores.
-funcionario_tipo_funcionario: Relaciona funcionário com sua função.
-receita_produto: Relaciona uma receita no sistema com um produto cadastrado.
-ingrediente_receita: Relaciona o ingrediente com a/as receita/as que onde ele se faz necessário.
-decoracao_cor: Informações referentes à decorações relacionadas a cores.
-compra_forma_pag: Relaciona forma de pagamento com valor pago.
-atividade_fornecedor: Armazena e relacionainformações relacionadas à atividade do fornecedor.
-   
+    pessoa: tabela que armazena dados das pessoas.
+    funcionario: Tablela qe armazena informaçoes do funcionáeio e está relacionada à tabela pessoa.
+    tipo_funcionario: Identifica o tipo de funcionário, está relacionada a funcionário.
+    contato: Informações de contato referente de cada pessoa cadastrada no sistema;
+    bairro: o nome da cidade, sua identificação e a cidade em que está localizada;
+    cidade: Informações das cidades cadastradas no sistema.
+    estado: Armazena os estados(UF) cadastrados no sistema.
+    pais: Tabela que armazena todos os países cadastrados.
+    endereco: Tabelas com informações de rua das pessoas.
+    fornecedor: Esta tabela concentra as informações gerais do fornecedor.
+    ingrediente: Tabelas com informaçoes gerais de cada ingrediente utilizado nas receitas.
+    tipo_ingrediente: tabale com o tipo de ingrediente. 
+    unid_medida: Esta tabela contém as unidades de medidas na utilização de ingredientes para a produção de receitas.
+    marca: Armazena as marcas de ingredientes utilizados.
+    receita: Armazena o modo de preparo dos pedidos.
+    produto: Informações gerais sobre cada produto fabricado/comercializado pela empresa.
+    pedido: Esta tabela armazena informações gerais de cada pedido realizado, como o valor, a pessoa que pefiu e o funcionario que efetuou a venda e status.
+    tipo_produto: Armazena os tipos/linhas de produtos comercializados.
+    decoracao: Esta tabela armazena informações sobre a decoração desejada.
+    cor: Tabela que apresenta todas as cores disponíveis/cadastradas no sistema.
+    item_pedido_contem: Armazenas informações de decoração das encomendas/pedidos.
+    estoque_disponivel_produzido: Tabela que armazena a quantidade de cada produto produzido qu está disponível em estoque.
+    compra_debita: Tabela que registra dados de pagamentos efetuados por clientes.
+    forma_pagamento: Tabela que apresenta as formas de pagamento disponíveis.
+    status: Tabela que contem os estados que os pedidos podem apresentar durante o processo de produção e pedidos realizados.
+    ramo_atividade: Tabela que armazena os ramos de atividades dos fornecedores.
+    estoque_ingre: Estoque de ingredientes, relaciona o ingrediente e sua quantidade no sistema, além de informações de fornecimento e marca.
+    ingrediente_fornecimento: Relaciona o ingrediente com o fornecedor.
+    ingrediente_marca_tem: Relaciona os igredientes e suas marcas/produtores.
+    funcionario_tipo_funcionario: Relaciona funcionário com sua função.
+    receita_produto: Relaciona uma receita no sistema com um produto cadastrado.
+    ingrediente_receita: Relaciona o ingrediente com a/as receita/as que onde ele se faz necessário.
+    decoracao_cor: Informações referentes à decorações relacionadas a cores.
+    compra_forma_pag: Relaciona forma de pagamento com valor pago.
+    atividade_fornecedor: Armazena e relacionainformações relacionadas à atividade do fornecedor.
+
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/Logico_endgame.png)
 
