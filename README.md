@@ -69,39 +69,39 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 DECISÕES DE PROJETO
-    pessoa: id,	nome,	sexo,	CPF,	data de nascimento. Herda informações de contato e endereço através de seus identificadores como chaves estrangeiras.
-    funcionario: id, salario,	carga horária,	nome de usuário do sistema e sua	senha. herda dados de pessoa atraves da chave estrangeira fk_pessoa_id.
+    pessoa: id, nome, sexo, CPF, data de nascimento. Herda informações de contato e endereço através de seus identificadores como chaves estrangeiras.
+    funcionario: id, salario, carga horária, nome de usuário do sistema e sua senha. herda dados de pessoa atraves da chave estrangeira fk_pessoa_id.
     tipo_funcionario: id, cargo.
     contato: Informações de contato referente de cada pessoa cadastrada no sistema;
     bairro: o nome da cidade, sua identificação e a cidade em que está localizada;
     cidade: id, nome, estado
     estado: id, nome, sigla, país
     pais: id, nome
-    endereco: id,	logradouro,	CEP,	numero,	ponto de referência,	possue o identificador de bairro como chave estrangeira
-    fornecedor: id,	nome,	CNPJ, possue como chaves estrangeiras o idetificador de endereço e contato;
-    ingrediente: id, preco,	nome,	peso, se relaciona por meio de chaves estrangeiras de identificação da unidade de medida e tipo de ingrediente.
-    tipo_ingrediente: id,	nome,	pericividade,    
+    endereco: id, logradouro, CEP, numero, ponto de referência, possue o identificador de bairro como chave estrangeira
+    fornecedor: id, nome, CNPJ, possue como chaves estrangeiras o idetificador de endereço e contato;
+    ingrediente: id, preco, nome, peso, se relaciona por meio de chaves estrangeiras de identificação da unidade de medida e tipo de ingrediente.
+    tipo_ingrediente: id, nome, pericividade,    
     rom unid_medida: id, nome
-    marca: id,	nome,	linha
-    receita: id,	nome,	modo de preparo
-    produto: id, nome,	valor de venda,	lucro,	custo,	dias de validade,	peso. se relacionará externamente com a identificação do tipo de produto, identificação de decoração e identificação da unidade de medida.
-    pedido: id, valor,	data que o pedido foi realizado, pagamento de	parcela inicia, data de entrega e quantidade. As relações externas se dão pelo identificação de pessoa, status e funcionário.
+    marca: id, nome, linha
+    receita: id, nome, modo de preparo
+    produto: id, nome, valor de venda, lucro, custo, dias de validade, peso. se relacionará externamente com a identificação do tipo de produto, identificação de decoração e identificação da unidade de medida.
+    pedido: id, valor, data que o pedido foi realizado, pagamento de parcela inicia, data de entrega e quantidade. As relações externas se dão pelo identificação de pessoa, status e funcionário.
     tipo_produto: id, nome, linha
     decoracao: id, descrição da decoração, link para imagem
     cor: id, nome.
     item_pedido_contem: id, relações externas, através de chaves estrangeiras, com decoração, status, produto e pedido.
-    estoque_disponivel_produzido: id, valor,	data de validade,	data de fabricação,	quantidade,	lote. Suas chaves estrangeiras são o identificadores de pedido e produto.
-    compra_debita:	id, numero de parcelas,	data da compra,	valor total,	valor pago,	quantidade, e os identificadores de pessoa e estoque disponível produzido.
-    forma_pagamento: id,	nome,	taxa de juros
+    estoque_disponivel_produzido: id, valor, data de validade, data de fabricação, quantidade, lote. Suas chaves estrangeiras são o identificadores de pedido e produto.
+    compra_debita: id, numero de parcelas, data da compra, valor total, valor pago, quantidade, e os identificadores de pessoa e estoque disponível produzido.
+    forma_pagamento: id, nome, taxa de juros
     status: id, nome
     ramo_atividade: id, nome
-    estoque_ingre: id,	quantidade na unidade de medida. Possue ligações externas com o identificador de infregiente_fornecimento e identificação da marca.
+    estoque_ingre: id, quantidade na unidade de medida. Possue ligações externas com o identificador de infregiente_fornecimento e identificação da marca.
     ingrediente_fornecimento: id, relações externas por meio do identificador de ingrediente e fornecedor.
     ingrediente_marca_tem: id. suas ligações externas se dão atraves do identificadores de marca e ingrediente.
     funcionario_tipo_funcionario: id. possue duas chaves estrangeiras, sendo elas o identificadores de funcionário e tipo de funcionário.
-    receita_produto: id, fk_receita_id,	fk_produto_id	
-    ingrediente_receita: id, quantidade, e	preco_quant_usada. Ligações externas com ingrediente,receita através de seus identificadores únicos.
-    decoracao_cor: id, fk_cor_id,	fk_decoracao_id	
+    receita_produto: id, fk_receita_id, fk_produto_id.
+    ingrediente_receita: id, quantidade, e preco_quant_usada. Ligações externas com ingrediente,receita através de seus identificadores únicos.
+    decoracao_cor: id, fk_cor_id, fk_decoracao_id
     compra_forma_pag: id, suas chaves externa são os identificadores de forma de pagamento e compra debitada.
     atividade_fornecedor: id. suas chaves estrangeiras são o identificador de ramo de atividade e de fornecedor;
 
