@@ -175,8 +175,83 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
 >## Marco de Entrega 03 em: (27/09/18) <br>
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
-    O código completo referentes à este tópico pode ser encontrado no arquivo topico.sql
+    O código completo referentes à este tópico pode ser encontrado no arquivo topico9.sql
+    
+    /*Para deixar as buscas mais interessantes, segue abaixo mais algumas linhas de inserção de dados em algumas das tabelas.*/
+    INSERT INTO  contato  ( id ,  email ,  tel_fixo ,  celular ,  instagram ,  facebook ) 
+    VALUES ('5', 'francisco@contato.com', '55555555', '998872477', NULL, NULL), 
+    ('6', 'greenwald@theintercept.com', '66666666', '998953421', '@vazaJato', NULL),
+    ('7', 'blackpanther@wakanda.com', '77777777', '998872657', NULL, NULL), 
+    ('8', 'Marielle@vive.com', '88888888', '998952141', '@mariellevive', NULL),
+    ('9', 'kimgordon@sonicyouth.com', '99999999', '995052621', '@kimyouth', NULL);
+
+    INSERT INTO   bairro   (  nome  ,   fk_cidade_id  ,  id  ) 
+    VALUES ('Cariacica sede', '3','3'), 
+    ('Tabajara', '3','4'),
+    ('Itaciba', '3','5'),
+    ('campo grande', '3','6'),
+    ('cobilândia', '4','7'),
+    ('Praia da Costa', '4','8');
+
+    INSERT INTO  endereco  ( id ,  logradouro ,  CEP ,  numero ,  ponto_referencia ,fk_bairro_id ) 
+    VALUES ('6', 'rua dos anjos', '29160788', '130', 'rua do bar do seu ze', '1'), 
+    ('7', 'avenida principal', '000987564', '1-f', 'ao lado dos correios', '2'), 
+    ('8', 'avenida do pedrinho', '184390267', '9-b', 'em frente a padaria da lola', '3'), 
+    ('9', 'rua do amor', '18903348', '120', 'atras do coleigio zezinho', '4'), 
+    ('10', 'avenida avenidona', '28109258', '50-c', 'em frente ao buteco copo sujo', '5'),
+    ('11', 'rua do leite', '189036728', '150', 'nem o uber aguenta és', '6'), 
+    ('12', 'rua do trigo', '189098728', '140', 'entre a rua 1 e a 3 mas não é a 2', '7'), 
+    ('13', 'rua do doce', '189036446', '10', 'atras da rua da frente', '8');
+
+    INSERT INTO  pessoa  ( id ,  nome ,  sexo ,  CPF ,  data_nasc ,  fk_contato_id ,  fk_endereco_id )
+    VALUES ('6', 'Francisco', 'M', '192829394', '1991-05-31', '5', '10'), 
+    ('7', 'greenwald', 'M', NULL, '1989-06-03', '6', '9'), 
+    ('8', 'pantera negra', 'M', '0540054800', '1980-06-02', '7', '8'), 
+    ('9', 'Marielle', 'F', NULL, '1978-06-09', '8', '7'), 
+    ('10', 'kim gordon', 'F', NULL, '1990-06-04', '9', '6');
+
+    INSERT INTO  pedido  ( valor ,  id ,  data_pedido ,  entrada ,  data_entrega ,qtd, fk_pessoa_id ,  fk_status_id ,  fk_funcionario_id ) 
+    VALUES ('100', '4', '2019-05-15', NULL, '2019-06-05','2', '5', '5', '1'), 
+    ('200', '5', '2019-04-13', NULL, NULL,'3' ,'4', '4', '1'), 
+    ('150', '6', '2017-06-01', NULL, NULL,'6', '3', '2', '1'),
+    ('400', '7', '2019-04-13', NULL, NULL,'3' ,'6', '2', '1'), 
+    ('110', '8', '2017-06-01', NULL, NULL,'6', '7', '2', '1'),
+    ('160', '9', '2017-06-01', NULL, NULL,'6', '9', '2', '1'),
+    ('150', '10', '2017-06-01', NULL, NULL,'6', '8', '2', '1'),
+    ('150', '11', '2017-06-01', NULL, NULL,'6', '10', '2', '1');
+
+    INSERT INTO  item_pedido_contem  ( id ,  fk_decoracao_id ,  fk_status_id ,  fk_produto_id ,  fk_pedido_id ) 
+    VALUES ('3', '1', '3', '3', '5'), 
+    ('4', '2', '4', '2', '2'), 
+    ('5', '1', '2', '3', '3'), 
+    ('6', '2', '5', '2', '5');
+
+    INSERT INTO  fornecedor  ( id ,  nome ,  CNPJ ,  fk_endereco_id ,  fk_contato_id ) 
+    VALUES ('11', 'tião leiteiro', '534688464', '1', '4'),
+    ('12', 'atacadão da ana', '534688464', '3', '4'),  
+    ('13', 'casa dos doces', '468453453', '5', '1');
+
+    INSERT INTO   ingrediente_marca_tem  ( id, fk_marca_id  , fk_ingrediente_id) 
+    VALUES ('10','3', '4'), 
+    ('6','2', '3'), 
+    ('7','3', '1'), 
+    ('8','4', '5'), 
+    ('9','2', '2');
+
+    INSERT INTO  ingrediente_fornecimento  ( fk_ingrediente_id ,  fk_fornecedor_id ,  id ) 
+    VALUES ('3', '11', '6'), 
+    ('2', '12', '7'), 
+    ('4', '13', '8');
+
+    INSERT INTO   tipo_produto   (  linha  ,   id  ,   nome  ) VALUES 
+    ('tradicional', '6', 'Vegan');
+
+    INSERT INTO  produto  ( nome ,  valor_venda ,  lucro ,  custo ,  validade_dia, peso, id , fk_tipo_produto_id, fk_decoracao_id,fk_unid_medida_id ) 
+    VALUES ('brigadeiro', '2', '1', '1', '7','10', '5', '6', '2','1'), 
+    ('cupcake', '5', '10', '20', '5','3','7', '6', '2','1'), 
+    ('alfajor', '3', '10', '40', '7','3', '8', '6', '2','1'), 
+    ('milkshake', '8', '3', '5', '1','200', '9', '6', '2','2');
+    
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
     select * from pessoa;
     select * from funcionario;
