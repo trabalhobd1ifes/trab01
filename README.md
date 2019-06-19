@@ -176,27 +176,197 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
+    O código completo referentes à este tópico pode ser encontrado no arquivo topico.sql
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+    select * from pessoa;
+    select * from funcionario;
+    select * from tipo_funcionario;
+    select * from contato;
+    select * from bairro;
+    select * from cidade;
+    select * from estado;
+    select * from pais;
+    select * from endereco;
+    select * from fornecedor;
+    select * from ingrediente;
+    select * from tipo_ingrediente;
+    select * from unid_medida;
+    select * from marca;
+    select * from receita;
+    select * from produto;
+    select * from pedido;
+    select * from tipo_produto;
+    select * from decoracao;
+    select * from cor;
+    select * from item_pedido_contem;
+    select * from estoque_disponivel_produzido;
+    select * from compra_debita;
+    select * from forma_pagamento;
+    select * from status;
+    select * from ramo_atividade;
+    select * from estoque_ingre;
+    select * from ingrediente_fornecimento;
+    select * from ingrediente_marca_tem;
+    select * from funcionario_tipo_funcionario;
+    select * from receita_produto;
+    select * from ingrediente_receita;
+    select * from decoracao_cor;
+    select * from compra_forma_pag;
+    select * from atividade_fornecedor;
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+    /*Seleciona pessoas com o campo cpf vazio*/
+    select nome from pessoa where CPF is NULL;
+    
+    /*Seleciona pessoas com o campo cpf vaziprodutos da linha tracicional*/
+    select nome from tipo_produto where linha ='tradicional';
+    
+    /*Seleciona pessoas com o campo cpf vazioseleciona produtos medidos em gramas*/
+    select nome from ingrediente where fk_unid_medida_id = 1;
+    
+    /*Seleseleciona fornecedor do endereço 'avenida mauro batalha'*/
+    select nome from fornecedor where fk_endereco_id = 5;
+
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
-    b) Criar no mínimo 3 consultas com operadores aritméticos 
+    /*mulheres com cpf vazio*/
+    select * from pessoa
+    WHERE sexo = 'F' AND cpf IS null;
+    
+    /*homens com cpf vazio*/
+    select * from pessoa
+    WHERE sexo = 'M' AND cpf IS null;
+    
+    /*contatos sem ponto de referencia*/
+    select * from endereco
+    WHERE ponto_referencia = ' ' or ponto_referencia IS null;
+    
+    /*mostra produtos que não estão atrasador*/
+    select * from pedido
+    WHERE NOT fk_status_id = 4;
+    
+    b) Criar no mínimo 3 consultas com operadores aritméticos    
+    
+    /*ingrediente*/
+    select * from ingrediente
+    where peso > 1000;
+    
+    /*produto que gasta menos de 50reais pra fazer*/
+    select * from produto
+    where custo < 50;
+    
+    /*produto que custa menos de 50reais pra fazer e é vendido por mais de 50*/
+    select * from produto
+    where custo <= 50 and valor_venda > 50;
+    
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+    select descricao as 'Personalização' from decoracao;
+    
+    select fk_endereco_id as 'Endereço' from fornecedor;
+    
+    select fk_unid_medida_id as 'Unidade de Medida' from ingrediente;
+
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
+    /*- alterar numero de telefone, email e endereço*/
+    UPDATE contato
+    SET email = "pedro@gmail.com",instagram = "@pedrinho_legal"
+    WHERE id = 3;
+    
+    /*- alterar numero de telefone, email e endereço*/
+    UPDATE contato
+    SET instagram = "sem cadastro"
+    WHERE instagram is null;
+    
+    /*- alterar numero de telefone, email e endereço*/
+    UPDATE contato
+    SET facebook = "sem cadastro"
+    WHERE facebook is null;
+    
+    /*- alterar numero de telefone, email e endereço*/
+    UPDATE pessoa
+    SET cpf = "0"
+    WHERE cpf is null;
+    
+    /*- alterar valores de venda e custo de produtos*/
+    UPDATE produto
+    SET valor_venda = 65, custo = 55
+    WHERE valor_venda = 50;
+    
+    /*- alterar encomenda/personalização*/
+    UPDATE DECORACAO
+    SET descricao = "recheio de nozes, com cobertura de brigadeiro vegano"
+    WHERE id = 2;
 
 >## Marco de Entrega 04 em: (18/10/2017)<br>
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+        /*exibe fornecedor e seus informações de contato*/
+       SELECT fornecedor.id as 'Código do fornecedor', fornecedor.nome as 'Fornecedor', fornecedor.cnpj, contato.tel_fixo as telefone, contato.email as 'email comercial', endereco.logradouro as rua
+       FROM fornecedor, contato, endereco
+       WHERE fornecedor.fk_contato_id = contato.id and fornecedor.fk_endereco_id = endereco.id;
+
+       /*mostra todos os pedidos acima de determinado valor, neste exemplo valorias iguais ou acima de 150*/
+       SELECT pessoa.NOME as 'cliente', pedido.id as 'nº do pedido', pedido.valor
+       FROM pedido, pessoa, funcionario
+       WHERE pessoa.id = pedido.fk_pessoa_id AND PEDIDO.VALOR >= 150.00;
+
+       /*seleciona todos os produtos veganos*/
+       select produto.nome, tipo_produto.nome
+       FROM tipo_produto, produto
+       where tipo_produto.id = produto.fk_tipo_produto_id and tipo_produto.nome = 'Vegan';
+
+       /*mostra todos o valor total dos pedidos do cliente e o quanto ele já pagou*/
+       select pedido.id as 'nº do pedido', pessoa.nome as 'cliente', pedido.data_pedido as 'pedido em', pedido.valor as 'valor total', compra_debita.valor_pago as 'valor recebido'
+       from pedido, pessoa, compra_debita, compra_forma_pag
+       where pessoa.id = pedido.fk_pessoa_id and compra_forma_pag.fk_compra_debita_id = compra_debita.id;
+
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
+        /*consulta pessoa e seu cpf*/
+        SELECT nome, CPF
+        FROM pessoa
+        GROUP BY nome, CPF;
+        
+        /*consulta cep e nome da rua*/
+        SELECT cep, logradouro as 'nome da rua'
+        FROM endereco
+        GROUP BY cep, logradouro;
+        
+        /*conta a quantidade de pedidos por pessoa*/
+        SELECT pessoa.nome, COUNT(pedido.Id) as 'quantidade de pedidos'
+        FROM pedido, pessoa
+        where pessoa.id = pedido.fk_pessoa_id
+        GROUP BY fk_pessoa_id;
+
+        /*mostra o valor total dos pedidos de cada cliente*/
+        SELECT pessoa.nome, SUM(pedido.valor) as 'valor total dos pedidos'
+        FROM pessoa, pedido
+        where pedido.fk_pessoa_id = pessoa.id
+        group BY pessoa.nome;
+
+        /*mostra a quantidade de pedidos e valor total dos pedidos de cada cliente*/
+        SELECT pessoa.nome, COUNT(pedido.Id) as 'quantidade de pedidos', SUM(pedido.valor) as 'valor total dos pedidos'
+        FROM pessoa, pedido
+        where pedido.fk_pessoa_id = pessoa.id
+        group BY pessoa.nome;
+
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
+        /*seleciona todas as pessoas que o nome começa com a letra j*/
+        select * from pessoa where nome like 'J%';
+        /*seleciona todos os produtos que são bolo*/
+        select * from tipo_produto where nome like 'Bolo%';
+        /*seleciona todos os endereços que são avenidas*/
+        select * from endereco where logradouro like 'avenida%';
+        /*seleciona a decoração ganache*/
+        select * from decoracao where descricao like 'ganache%';
+        /*seleciona todos os contados que são gmail*/
+        select * from contato where email like '%gmail.com%';
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
