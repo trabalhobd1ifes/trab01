@@ -69,17 +69,17 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 DECISÕES DE PROJETO
-    [pessoa: id, nome, sexo, CPF, data de nascimento. Herda informações de contato e endereço através de seus identificadores como chaves estrangeiras.
-    [funcionario: id, salario, carga horária, nome de usuário do sistema e sua senha. herda dados de pessoa atraves da chave estrangeira fk_pessoa_id.
-    [tipo_funcionario: id, cargo.
-    [contato: Informações de contato referente de cada pessoa cadastrada no sistema;
-    [bairro: o nome da cidade, sua identificação e a cidade em que está localizada;
-    [cidade: id, nome, estado
-    [estado: id, nome, sigla, país
-    [pais: id, nome
-    [endereco: id, logradouro, CEP, numero, ponto de referência, possue o identificador de bairro como chave estrangeira
-    [fornecedor: id, nome, CNPJ, possue como chaves estrangeiras o idetificador de endereço e contato;
-    [ingrediente: id, preco, nome, peso, se relaciona por meio de chaves estrangeiras de identificação da unidade de medida e tipo de ingrediente.
+    [pessoa]: id, nome, sexo, CPF, data de nascimento. Herda informações de contato e endereço através de seus identificadores como chaves estrangeiras.
+    [funcionario]: id, salario, carga horária, nome de usuário do sistema e sua senha. herda dados de pessoa atraves da chave estrangeira fk_pessoa_id.
+    [tipo_funcionario]: id, cargo.
+    [contato]: Informações de contato referente de cada pessoa cadastrada no sistema;
+    [bairro]: o nome da cidade, sua identificação e a cidade em que está localizada;
+    [cidade]: id, nome, estado
+    [estado] id, nome, sigla, país
+    [pais]: id, nome
+    [endereco]: id, logradouro, CEP, numero, ponto de referência, possue o identificador de bairro como chave estrangeira
+    [fornecedor]: id, nome, CNPJ, possue como chaves estrangeiras o idetificador de endereço e contato;
+    [ingrediente]: id, preco, nome, peso, se relaciona por meio de chaves estrangeiras de identificação da unidade de medida e tipo de ingrediente.
     [tipo_ingrediente]: id, nome, pericividade,    
     [unid_medida]: id, nome
     [marca]: id, nome, linha
