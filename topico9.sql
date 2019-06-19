@@ -64,6 +64,14 @@ VALUES ('3', '11', '6'),
 ('2', '12', '7'), 
 ('4', '13', '8');
 
+INSERT INTO   tipo_produto   (  linha  ,   id  ,   nome  ) VALUES 
+('tradicional', '6', 'Vegan');
+
+INSERT INTO  produto  ( nome ,  valor_venda ,  lucro ,  custo ,  validade_dia, peso, id , fk_tipo_produto_id, fk_decoracao_id,fk_unid_medida_id ) 
+VALUES ('brigadeiro', '2', '1', '1', '7','10', '5', '6', '2','1'), 
+('cupcake', '5', '10', '20', '5','3','7', '6', '2','1'), 
+('alfajor', '3', '10', '40', '7','3', '8', '6', '2','1'), 
+('milkshake', '8', '3', '5', '1','200', '9', '6', '2','2');
 
 /*9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas)*/ 
 select * from pessoa;
@@ -102,15 +110,16 @@ select * from decoracao_cor;
 select * from compra_forma_pag;
 select * from atividade_fornecedor;
 
-
-
 /*9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)*/
 /*Seleciona pessoas com o campo cpf vazio*/
 select nome from pessoa where CPF is NULL;
+
 /*Seleciona pessoas com o campo cpf vaziprodutos da linha tracicional*/
 select nome from tipo_produto where linha ='tradicional';
+
 /*Seleciona pessoas com o campo cpf vazioseleciona produtos medidos em gramas*/
 select nome from ingrediente where fk_unid_medida_id = 1;
+
 /*Seleseleciona fornecedor do endereço 'avenida mauro batalha'*/
 select nome from fornecedor where fk_endereco_id = 5;
 
@@ -120,44 +129,58 @@ select nome from fornecedor where fk_endereco_id = 5;
 /*mulheres com cpf vazio*/
 select * from pessoa
 WHERE sexo = 'F' AND cpf IS null;
+
 /*homens com cpf vazio*/
 select * from pessoa
 WHERE sexo = 'M' AND cpf IS null;
+
 /*contatos sem ponto de referencia*/
 select * from endereco
 WHERE ponto_referencia = ' ' or ponto_referencia IS null;
+
 /*mostra produtos que não estão atrasador*/
 select * from pedido
 WHERE NOT fk_status_id = 4;
+
 /*b) Criar no mínimo 3 consultas com operadores aritméticos */
+
 /*ingrediente*/
 select * from ingrediente
 where peso > 1000;
+
 /*produto que gasta menos de 50reais pra fazer*/
 select * from produto
 where custo < 50;
+
 /*produto que custa menos de 50reais pra fazer e é vendido por mais de 50*/
 select * from produto
 where custo <= 50 and valor_venda > 50;
 
 /*c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas*/
-select descricao as 'Personalização' from decoracao;
+select descricao as 'Personalização' 
+from decoracao;
 
-select fk_endereco_id as 'Endereço' from fornecedor;
+select fk_endereco_id as 'Endereço' 
+from fornecedor;
 
-select fk_unid_medida_id as 'Unidade de Medida' from ingrediente;
+select fk_unid_medida_id as 'Unidade de Medida' 
+from ingrediente;
 
 /*9.4   CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12)*/ 
 
 /*a) Criar outras 5 consultas que envolvam like ou ilike*/
 /*seleciona todas as pessoas que o nome começa com a letra j*/
 select * from pessoa where nome like 'J%';
+
 /*seleciona todos os produtos que são bolo*/
 select * from tipo_produto where nome like 'Bolo%';
+
 /*seleciona todos os endereços que são avenidas*/
 select * from endereco where logradouro like 'avenida%';
+
 /*seleciona a decoração ganache*/
 select * from decoracao where descricao like 'ganache%';
+
 /*seleciona todos os contados que são gmail*/
 select * from contato where email like '%gmail.com%';
 
@@ -172,43 +195,30 @@ UPDATE contato
 SET email = "pedro@gmail.com",instagram = "@pedrinho_legal"
 WHERE id = 3;
 
-
 /*- alterar numero de telefone, email e endereço*/
 UPDATE contato
 SET instagram = "sem cadastro"
 WHERE instagram is null;
-
 
 /*- alterar numero de telefone, email e endereço*/
 UPDATE contato
 SET facebook = "sem cadastro"
 WHERE facebook is null;
 
-select * from contato;
-
 /*- alterar numero de telefone, email e endereço*/
 UPDATE pessoa
 SET cpf = "0"
 WHERE cpf is null;
-select * from pessoa;
+
 /*- alterar valores de venda e custo de produtos*/
 UPDATE produto
 SET valor_venda = 65, custo = 55
 WHERE valor_venda = 50;
-select * from produto;
 
 /*- alterar encomenda/personalização*/
 UPDATE DECORACAO
 SET descricao = "recheio de nozes, com cobertura de brigadeiro vegano"
 WHERE id = 2;
-select * from decoracao;
-
-
-/*- exluir produto atrasados */
-
-/*excluir fornecedor*/
-
-/*- excluir encomendas finalizadas
 
 /*9.6   CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)*/
 
@@ -225,6 +235,17 @@ WHERE fornecedor.fk_contato_id = contato.id and fornecedor.fk_endereco_id = ende
 SELECT pessoa.NOME as 'cliente', pedido.id as 'nº do pedido', pedido.valor
 FROM pedido, pessoa, funcionario
 WHERE pessoa.id = pedido.fk_pessoa_id AND PEDIDO.VALOR >= 150.00;
+
+/*seleciona todos os produtos veganos*/
+select produto.nome, tipo_produto.nome
+FROM tipo_produto, produto
+where tipo_produto.id = produto.fk_tipo_produto_id and tipo_produto.nome = 'Vegan';
+
+/*mostra todos o valor total dos pedidos do cliente e o quanto ele já pagou*/
+select pedido.id as 'nº do pedido', pessoa.nome as 'cliente', pedido.data_pedido as 'pedido em', pedido.valor as 'valor total', compra_debita.valor_pago as 'valor recebido'
+from pedido, pessoa, compra_debita, compra_forma_pag
+where pessoa.id = pedido.fk_pessoa_id and compra_forma_pag.fk_compra_debita_id = compra_debita.id;
+
 
 /*9.7   CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)*/
 
@@ -255,11 +276,6 @@ SELECT pessoa.nome, COUNT(pedido.Id) as 'quantidade de pedidos', SUM(pedido.valo
 FROM pessoa, pedido
 where pedido.fk_pessoa_id = pessoa.id
 group BY pessoa.nome;
-
-/*mostra todos o valor total dos pedidos do cliente e o quanto ele já pagou*/
-select pedido.id as 'nº do pedido', pessoa.nome as 'cliente', pedido.data_pedido as 'pedido em', pedido.valor as 'valor total', compra_debita.valor_pago as 'valor recebido'
-from pedido, pessoa, compra_debita, compra_forma_pag
-where pessoa.id = pedido.fk_pessoa_id and compra_forma_pag.fk_compra_debita_id = compra_debita.id;
 
 /*9.8   CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)*/
 
