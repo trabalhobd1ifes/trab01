@@ -342,6 +342,21 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
+    /*seleciona pessoas cudjo nome começa com a letra j*/
+    select * from pessoa where nome like 'J%';
+
+    /*seleciona produtos que são bolo*/
+    select * from tipo_produto where nome like 'Bolo%';
+
+    /*Seleciona todos os endereços situados em aenidas*/
+    select * from endereco where logradouro like 'avenida%';
+
+    /*Seleciona as decorações que possuem ganace*/
+    select * from decoracao where descricao like '%ganache%';
+
+    /*seleciona todos os contatos que são email*/
+    select * from contato where email like '%gmail.com%';
+
     b) Criar uma consulta para cada tipo de função data apresentada.
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
