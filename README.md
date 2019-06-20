@@ -142,17 +142,16 @@ Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
 ![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/Logico_endgame.png)
 
 ### 7	MODELO FÍSICO<br>
-https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql        
+Link do script de modelo fisíco: https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql  <br>
+
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico 
-        b) formato .SQL
-[https://github.com/trabalhobd1ifes/trab01/blob/master/insert_endgame.sql]
+
+Link do script com as instruções de inserção dos dados nas tabelas criadas pelo modelo fisíco: https://github.com/trabalhobd1ifes/trab01/blob/master/insert_endgame.sql
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS
 
-  Link do script com criação de de tabelas e inserção de dados:
-  [https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_e_insert_endgame.sql]
+  Link do script com criação de tabelas e inserção de dados: https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_e_insert_endgame.sql
   
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script
@@ -160,11 +159,16 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
         b) Criar um novo banco de dados para testar a restauracao 
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL
+        
 #### 8.4 Principais fluxos de informação e principais tabelas do sistema
         a) Quais os principais fluxos de dados de informação no sistema em densenvolvimento (mínimo 3)
+  Os principais fluxos de dados do sistema SUMEI são: Fluxo de vendas, fluxo de produção e fluxo de estoque. 
+        
         b) Quais as tabelas que conterão mais dados no sistema em densenvolvimento (mínimo 3)
-        c) informe quais as 5 principais tabelas do sistema em densenvolvimento.
->## Marco de Entrega 03 em: (27/09/18) <br>
+  As tabelas que mais conterão dados no sistema SUMEI serão: pessoa, ingredientes, receita, estoque, estoque disponivel produzido, endereco, compra debita.
+       
+       c) informe quais as 5 principais tabelas do sistema em densenvolvimento.
+As principais tabelas selecionada para o trabalho foram as do fluxo de vendas: pessoa, compra_debita, estoque_disponvel_produzido, pedido, item_pedido_contem e produto. 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     O código completo referentes à este tópico pode ser encontrado no arquivo topico9.sql
@@ -294,7 +298,8 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
     select nome from fornecedor where fk_endereco_id = 5;
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
+    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not.
+    
     /*mulheres com cpf vazio*/
     select * from pessoa
     WHERE sexo = 'F' AND cpf IS null;
@@ -311,6 +316,7 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
     select * from pedido
     WHERE NOT fk_status_id = 4;
     
+    <br>
     b) Criar no mínimo 3 consultas com operadores aritméticos    
     
     /*ingrediente*/
@@ -325,6 +331,7 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
     select * from produto
     where custo <= 50 and valor_venda > 50;
     
+    <br>
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
     select descricao as 'Personalização' from decoracao;
     
@@ -334,6 +341,7 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
+    <br>
     /*seleciona pessoas cudjo nome começa com a letra j*/
     select * from pessoa where nome like 'J%';
 
@@ -382,11 +390,11 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
     SET descricao = "recheio de nozes, com cobertura de brigadeiro vegano"
     WHERE id = 2;
 
->## Marco de Entrega 04 em: (18/10/2017)<br>
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+        <br>
         /*exibe fornecedor e seus informações de contato*/
        SELECT fornecedor.id as 'Código do fornecedor', fornecedor.nome as 'Fornecedor', fornecedor.cnpj, contato.tel_fixo as telefone, contato.email as 'email comercial', endereco.logradouro as rua
        FROM fornecedor, contato, endereco
@@ -454,9 +462,12 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
 
     select status.nome, pedido.id as pedido_id from pedido
     right join status on (status.id=pedido.fk_status_id)
-    arquivo com o resultado das consultas : https://github.com/trabalhobd1ifes/trab01/blob/master/consulta_9.8.rtf
+    
+Arquivo com o resultado das consultas : https://github.com/trabalhobd1ifes/trab01/blob/master/consulta_9.8.rtf
+
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
+        <br>
         /*seleciona todas as pessoas que o nome começa com a letra j*/
         select * from pessoa where nome like 'J%';
         /*seleciona todos os produtos que são bolo*/
@@ -468,6 +479,7 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
         /*seleciona todos os contados que são gmail*/
         select * from contato where email like '%gmail.com%';
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+        
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 
        select pessoa.nome, compra_debita.valor_pago,pessoa.sexo from pessoa
@@ -479,12 +491,14 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
 
        select * from pedido where valor in (select valor from produto where valor >'10');
 
-       arquivo com o resultado das consultas :https://github.com/trabalhobd1ifes/trab01/blob/master/consulta_9.10.rtf
+Arquivo com o resultado das consultas :https://github.com/trabalhobd1ifes/trab01/blob/master/consulta_9.10.rtf
+
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 Link do slide da apresentação: https://prezi.com/view/SwY6QrNtQ0YuKlqOXBct/ 
 
 ### 11 Backup completo do banco de dados postgres 
-       arquivo do backup:https://github.com/trabalhobd1ifes/trab01/blob/master/new_backup.zip
+
+Arquivo do backup:https://github.com/trabalhobd1ifes/trab01/blob/master/new_backup.zip
 
 ### 12	TUTORIAL COMPLETO DE PASSOS PARA RESTAURACAO DO BANCO E EXECUCAO DE PROCEDIMENTOS ENVOLVIDOS NO TRABALHO PARA OBTENÇÃO DOS RESULTADOS<br>
         a) Outros grupos deverão ser capazes de restaurar o banco 
@@ -493,7 +507,11 @@ Link do slide da apresentação: https://prezi.com/view/SwY6QrNtQ0YuKlqOXBct/
         d) realizar qualquer procedimento executado pelo grupo que desenvolveu o trabalho
         
 ### 13   DIFICULDADES ENCONTRADAS PELO GRUPO<br>
->## Marco de Entrega Final em: (08/11/2018)<br>
+O grupo encontrou muita dificuldade na hora de modelar os dados, pois o intuito era fazer o sistema o mais próximo possível do real para posteriormente fazer a implementação. 
+Por ser um sistema mais abrangente e com muitos detalhes, houve uma confusão na hora de detalhar as tabelas e atributos, mas essa dificuldade foi superada no decorrer do trabalho. 
+Além disso, o grupo teve dificuldades na definição dos termos usados no trabalho, o que fez com que os integrantes tivessem dificuldade de entender a lógica de raciocínio do outro e entrarem em consenso, porém superamos essa dificuldade através da criação de um arquivo com as principais definições dos termos no sistema que ficou disponível para termos acesso sempre que preciso.
+No entanto, a principal dificuldade do grupo foi o atraso das entregas, pois muitas coisas dependiam da modelagem de dados e sem ela ficava difícil dar continuidade ao trabalho, então focamos na modelagem de dados até que ela ficasse pronta e depois focamos em terminar o trabalho dividindo as funções.
+
         
 ### 14  FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
 <comentario no git>
