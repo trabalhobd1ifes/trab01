@@ -17,12 +17,6 @@ Este documento contém a especificação do projeto do banco de dados **_“SUME
 
 ### 3.MINI-MUNDO Novo<br>
 
-Descrever o mini-mundo! (Não deve ser maior do que 30 linhas) <br>
-Entrevista com o usuário e identificação dos requisitos.<br>
-Descrição textual das regras de negócio definidas como um  subconjunto do mundo real 
-cujos elementos são propriedades que desejamos incluir, processar, armazenar, 
-gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
-
 > O projeto proposto pelo grupo **“FABT Projetos”** para o público alvo é um sistema unificado onde o microempreendedor poderá ter a gestão completa do seu negócio.<br>
 Neste sistema o microempreendedor poderá cadastrar pessoas, que são seus cliente e funcionários, contendo suas informações pessoais como: _cpf, nome, data de nascimento e sexo_. Funcionário, por sua vez, possui informações exclusivas como: _salário, carga horária e tipo de funcionário_ que contém o cargo exercido. <br>
 O funcionário poderá cadastrar os pedidos dos clientes, sendo que os pedidos contém: _data do pedido, data de entrega, valor, status e itens do pedido_ que são os produtos que podem ter decorações personalizadas. 
@@ -38,7 +32,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 ![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/Inicio-INSERINDO.png)<br>
 
-![Arquivo PDF do Protótipo Balsamiq feito para Empresa Devcom]
+Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI
 (https://github.com/trabalhobd1ifes/trab01/blob/master/SUMEI.pdf)
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
