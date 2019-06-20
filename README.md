@@ -30,7 +30,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 Sugestão: https://balsamiq.com/products/mockups/<br>
 
-https://github.com/trabalhobd1ifes/trab01/blob/master/Inicio-INSERINDO.png <br>
+![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/Inicio-INSERINDO.png) <br>
 
 Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
 (https://github.com/trabalhobd1ifes/trab01/blob/master/SUMEI.pdf)
@@ -52,7 +52,7 @@ Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
     e deve ser criada antes do modelo conceitual
     c) Após criada esta tabela não deve ser modificada, pois será comparada com os resultados finais na conclusão do trabalho
     
-![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/discipbd1/trab01/blob/master/arquivos/TabelaEmpresaDevCom_sample.xlsx?raw=true "Tabela - Empresa Devcom")
+![Exemplo de Tabela de dados SUMEI](https://github.com/discipbd1/trab01/blob/master/arquivos/TabelaEmpresaDevCom_sample.xlsx?raw=true "Tabela - Empresa Devcom")
     
 >## Marco de Entrega 01 em: (06/09/2018)<br>
 
