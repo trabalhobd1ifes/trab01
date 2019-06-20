@@ -30,9 +30,9 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 Sugestão: https://balsamiq.com/products/mockups/<br>
 
-![Alt text] https://github.com/trabalhobd1ifes/trab01/blob/master/Inicio-INSERINDO.png <br>
+https://github.com/trabalhobd1ifes/trab01/blob/master/Inicio-INSERINDO.png <br>
 
-![Alt text] Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
+Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
 (https://github.com/trabalhobd1ifes/trab01/blob/master/SUMEI.pdf)
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
