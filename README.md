@@ -51,6 +51,7 @@ Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
  
 #### 4.2 TABELA DE DADOS DO SISTEMA:
 ![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/TABELA%20BD1.PNG) <br>
+
 [Exemplo de Tabela de dados SUMEI](https://github.com/trabalhobd1ifes/trab01/blob/master/Tabela%20selecionada.xlsx "Tabela - SUMEI")
 
 ### 5.MODELO CONCEITUAL<br>
@@ -98,7 +99,6 @@ Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
     [compra_forma_pag]: id, suas chaves externa são os identificadores de forma de pagamento e compra debitada.
     [atividade_fornecedor]: id. suas chaves estrangeiras são o identificador de ramo de atividade e de fornecedor;
 
->## Marco de Entrega 02 em: (17/09/2018)<br>
 #### 5.3 DESCRIÇÃO DOS DADOS 
     [pessoa]: tabela que armazena dados das pessoas.
     [funcionario]: Tablela qe armazena informaçoes do funcionáeio e está relacionada à tabela pessoa.
@@ -135,6 +135,9 @@ Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
     [decoracao_cor]: Informações referentes à decorações relacionadas a cores.
     [compra_forma_pag]: Relaciona forma de pagamento com valor pago.
     [atividade_fornecedor]: Armazena e relacionainformações relacionadas à atividade do fornecedor.
+    
+  <br>
+    
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/Logico_endgame.png)
 
@@ -144,7 +147,7 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
         a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico 
         b) formato .SQL
-        https://github.com/trabalhobd1ifes/trab01/blob/master/insert_endgame.sql
+![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/insert_endgame.sql)
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script 
