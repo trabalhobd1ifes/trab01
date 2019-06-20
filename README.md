@@ -41,15 +41,7 @@ Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
  clientes,o ticket médio por cliente, os ingredientes que preciso para fazer a receita, se tenho esses ingredientes em estoque ou não,
  os itens mais pedidos, a maior temporada de venda, o bairro que mais tenho clientes, quanto vendemos por dia, quantos e quais  
  ingredientes temos em estoque, as receitas mais usamos nos produtos, os ingredientes mais utilizados entre outras informações
-
-
-    b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
-   * Quantidade de clientes por bairro
-   * Quantidade de vendas por dia
-   * Ingredientes mais usados nas receitas
-   * Receita mais usadas em produto que fabricamos
-   * Quantidade de ingredientes em estoque
-    
+<br>
 > O sistema SUMEI conta inicialmente com os seguintes relatórios:
 * Relatório que informa a **quantidade de clientes por bairro** incluindo as seguintes informações: número de clientes em percentual e nomes dos bairros onde os clientes moram.
 * Relatório que informa a **quantidade de vendas por dia** incluindo as seguintes informações: valor total das vendas em reais e data do dia.
