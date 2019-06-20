@@ -162,13 +162,13 @@ Link do script com as instruções de inserção dos dados nas tabelas criadas p
         
 #### 8.4 Principais fluxos de informação e principais tabelas do sistema
         a) Quais os principais fluxos de dados de informação no sistema em densenvolvimento (mínimo 3)
-  Os principais fluxos de dados do sistema SUMEI são: Fluxo de vendas, fluxo de produção e fluxo de estoque. 
+ * Os principais fluxos de dados do sistema SUMEI são: Fluxo de vendas, fluxo de produção e fluxo de estoque. 
         
         b) Quais as tabelas que conterão mais dados no sistema em densenvolvimento (mínimo 3)
-  As tabelas que mais conterão dados no sistema SUMEI serão: pessoa, ingredientes, receita, estoque, estoque disponivel produzido, endereco, compra debita.
+ * As tabelas que mais conterão dados no sistema SUMEI serão: pessoa, ingredientes, receita, estoque, estoque disponivel produzido, endereco, compra debita.
        
        c) informe quais as 5 principais tabelas do sistema em densenvolvimento.
-As principais tabelas selecionada para o trabalho foram as do fluxo de vendas: pessoa, compra_debita, estoque_disponvel_produzido, pedido, item_pedido_contem e produto. 
+ * As principais tabelas selecionada para o trabalho foram as do fluxo de vendas: pessoa, compra_debita, estoque_disponvel_produzido, pedido, item_pedido_contem e produto. 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     O código completo referentes à este tópico pode ser encontrado no arquivo topico9.sql
@@ -341,7 +341,7 @@ As principais tabelas selecionada para o trabalho foram as do fluxo de vendas: p
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
-    <br>
+  
     /*seleciona pessoas cudjo nome começa com a letra j*/
     select * from pessoa where nome like 'J%';
 
@@ -394,7 +394,7 @@ As principais tabelas selecionada para o trabalho foram as do fluxo de vendas: p
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
-        <br>
+        
         /*exibe fornecedor e seus informações de contato*/
        SELECT fornecedor.id as 'Código do fornecedor', fornecedor.nome as 'Fornecedor', fornecedor.cnpj, contato.tel_fixo as telefone, contato.email as 'email comercial', endereco.logradouro as rua
        FROM fornecedor, contato, endereco
@@ -467,7 +467,7 @@ Arquivo com o resultado das consultas : https://github.com/trabalhobd1ifes/trab0
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
-        <br>
+        
         /*seleciona todas as pessoas que o nome começa com a letra j*/
         select * from pessoa where nome like 'J%';
         /*seleciona todos os produtos que são bolo*/
@@ -507,9 +507,12 @@ Arquivo do backup:https://github.com/trabalhobd1ifes/trab01/blob/master/new_back
         d) realizar qualquer procedimento executado pelo grupo que desenvolveu o trabalho
         
 ### 13   DIFICULDADES ENCONTRADAS PELO GRUPO<br>
-O grupo encontrou muita dificuldade na hora de modelar os dados, pois o intuito era fazer o sistema o mais próximo possível do real para posteriormente fazer a implementação. 
+O grupo encontrou muita dificuldade na hora de modelar os dados, pois o intuito era fazer o sistema o mais próximo possível do real para posteriormente fazer a implementação.
+
 Por ser um sistema mais abrangente e com muitos detalhes, houve uma confusão na hora de detalhar as tabelas e atributos, mas essa dificuldade foi superada no decorrer do trabalho. 
+
 Além disso, o grupo teve dificuldades na definição dos termos usados no trabalho, o que fez com que os integrantes tivessem dificuldade de entender a lógica de raciocínio do outro e entrarem em consenso, porém superamos essa dificuldade através da criação de um arquivo com as principais definições dos termos no sistema que ficou disponível para termos acesso sempre que preciso.
+
 No entanto, a principal dificuldade do grupo foi o atraso das entregas, pois muitas coisas dependiam da modelagem de dados e sem ela ficava difícil dar continuidade ao trabalho, então focamos na modelagem de dados até que ela ficasse pronta e depois focamos em terminar o trabalho dividindo as funções.
 
         
