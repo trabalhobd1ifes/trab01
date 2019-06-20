@@ -33,8 +33,14 @@ Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
 (https://github.com/trabalhobd1ifes/trab01/blob/master/SUMEI.pdf)
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informações? 
-    O SUMEI é um sistema que ajuda nas tomadas de decisões, através da inserção de dados, aumentando o número de acertos nas estratégias  do seu negócio. Isso porque ele gera relatórios que facilitam o entendimento das necessidades do negócio e responde perguntas que todo empreendedor da área faz sobre o andamento do seu negócio.
-    O sistema traz informações como o valor de custo das receitas, o custo e lucro por temporada, a média de produtos vendidos por clientes, o ticket médio por cliente, os ingredientes que preciso para fazer a receita, se tenho esses ingredientes em estoque ou não, os itens mais pedidos, a maior temporada de venda, o bairro que mais tenho clientes, quanto vendemos por dia, quantos e quais ingredientes temos em estoque, as receitas mais usamos nos produtos, os ingredientes mais utilizados entre outras informações
+    O SUMEI é um sistema que ajuda nas tomadas de decisões, através da inserção de dados, aumentando o número 
+    de acertos nas estratégias  do seu negócio. Isso porque ele gera relatórios que facilitam o entendimento 
+    das necessidades do negócio e responde perguntas que todo empreendedor da área faz sobre o andamento do seu negócio.
+    
+    O sistema traz informações como o valor de custo das receitas, o custo e lucro por temporada, a média de produtos vendidos por 
+    clientes, o ticket médio por cliente, os ingredientes que preciso para fazer a receita, se tenho esses ingredientes em estoque ou 
+    não, os itens mais pedidos, a maior temporada de venda, o bairro que mais tenho clientes, quanto vendemos por dia, quantos e quais 
+    ingredientes temos em estoque, as receitas mais usamos nos produtos, os ingredientes mais utilizados entre outras informações
 
 
 
@@ -45,12 +51,12 @@ Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
     * Receita mais usadas em produto que fabricamos
     * Quantidade de ingredientes em estoque
     
-> O sistema SUMEI conta inicialmente dos seguintes relatórios:
-* Relatório que informe quais são os gerentes de cada departamento incluindo as seguintes informações: número do departamento,  nome do departamento, e nome do gerente.
-* Relatório de empregados por projeto incluindo as seguintes informações: número do projeto, nome do projeto, rg do empregado, nome do empregado e quantidade de horas de trabalho do empregado alocadas ao projeto.
-* Relatório de empregados com dependentes incluindo as seguintes informações: rg do empregado, nome do empregado, nome do dependente, tipo de relação, data de nascimento do dependente e sexo do dependente.
-* Relatório com a quantidade de empregados por cada departamento incluindo as seguintes informações: nome do departamento, supervisor e quantidade de empregados alocados no departamento.
-* Relatório de supervisores e supervisionados incluindo as seguintes informações: nome do supervisor e nome do supervisionado.
+> O sistema SUMEI conta inicialmente com os seguintes relatórios:
+* Relatório que informa a **quantidade de clientes por bairro** incluindo as seguintes informações: número de clientes em percentual e nomes dos bairros onde os clientes moram.
+* Relatório que informa a **quantidade de vendas por dia** incluindo as seguintes informações: valor total das vendas em reais e data do dia.
+* Relatório de **ingredientes mais usados nas receitas** incluindo as seguintes informações: nome do ingrediente mais usado e quantidade do ingrediente em percentual.
+* Relatório de **receita mais usadas em produto que fabricamos** incluindo as seguintes informações: quantidade de produtos que contém a receita e nome das receitas.
+* Relatório que informa a **quantidade de ingredientes em estoque** incluindo as seguintes informações: nome dos produtos e quantidade mais usada em unidade de medida, sendo elas mililitro e gramas.
  
  
 #### 4.2 TABELA DE DADOS DO SISTEMA:
