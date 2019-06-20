@@ -33,15 +33,13 @@ Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
 (https://github.com/trabalhobd1ifes/trab01/blob/master/SUMEI.pdf)
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informações? 
-    O SUMEI é um sistema que ajuda nas tomadas de decisões, através da inserção de dados, aumentando o número 
-    de acertos nas estratégias  do seu negócio. Isso porque ele gera relatórios que facilitam o entendimento 
-    das necessidades do negócio e responde perguntas que todo empreendedor da área faz sobre o andamento do seu negócio.
-    
-    O sistema traz informações como o valor de custo das receitas, o custo e lucro por temporada, a média de produtos vendidos por 
-    clientes, o ticket médio por cliente, os ingredientes que preciso para fazer a receita, se tenho esses ingredientes em estoque ou 
-    não, os itens mais pedidos, a maior temporada de venda, o bairro que mais tenho clientes, quanto vendemos por dia, quantos e quais 
-    ingredientes temos em estoque, as receitas mais usamos nos produtos, os ingredientes mais utilizados entre outras informações
-
+  O SUMEI é um sistema que ajuda nas tomadas de decisões, através da inserção de dados, aumentando o número de acertos nas estratégias
+  do seu negócio. Isso porque ele gera relatórios que facilitam o entendimento das necessidades do negócio e responde perguntas que todo
+  empreendedor da área faz sobre o andamento do seu negócio.
+O sistema traz informações como o valor de custo das receitas, o custo e lucro por temporada, a média de produtos vendidos por clientes,
+o ticket médio por cliente, os ingredientes que preciso para fazer a receita, se tenho esses ingredientes em estoque ou não, os itens
+mais pedidos, a maior temporada de venda, o bairro que mais tenho clientes, quanto vendemos por dia, quantos e quais ingredientes temos
+em estoque, as receitas mais usamos nos produtos, os ingredientes mais utilizados entre outras informações
 
 
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
