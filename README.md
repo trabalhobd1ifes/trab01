@@ -26,19 +26,26 @@ Além disso, o sistema não poderia deixar de contar com a gestão de pagamento,
 Dessa forma o microempreendedor poderá ter relatórios de produtos mais vendidos, ingredientes mais usados, gastos etc.
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
-
-Sugestão: https://balsamiq.com/products/mockups/<br>
 
 ![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/Inicio-INSERINDO.png) <br>
 
 Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
 (https://github.com/trabalhobd1ifes/trab01/blob/master/SUMEI.pdf)
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
+    a) O sistema proposto poderá fornecer quais tipos de relatórios e informações? 
+    O SUMEI é um sistema que ajuda nas tomadas de decisões, através da inserção de dados, aumentando o número de acertos nas estratégias  do seu negócio. Isso porque ele gera relatórios que facilitam o entendimento das necessidades do negócio e responde perguntas que todo empreendedor da área faz sobre o andamento do seu negócio.
+    O sistema traz informações como o valor de custo das receitas, o custo e lucro por temporada, a média de produtos vendidos por clientes, o ticket médio por cliente, os ingredientes que preciso para fazer a receita, se tenho esses ingredientes em estoque ou não, os itens mais pedidos, a maior temporada de venda, o bairro que mais tenho clientes, quanto vendemos por dia, quantos e quais ingredientes temos em estoque, as receitas mais usamos nos produtos, os ingredientes mais utilizados entre outras informações
+
+
+
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
+    * Quantidade de clientes por bairro
+    * Quantidade de vendas por dia
+    * Ingredientes mais usados nas receitas
+    * Receita mais usadas em produto que fabricamos
+    * Quantidade de ingredientes em estoque
     
-> A Empresa DevCom precisa inicialmente dos seguintes relatórios:
+> O sistema SUMEI conta inicialmente dos seguintes relatórios:
 * Relatório que informe quais são os gerentes de cada departamento incluindo as seguintes informações: número do departamento,  nome do departamento, e nome do gerente.
 * Relatório de empregados por projeto incluindo as seguintes informações: número do projeto, nome do projeto, rg do empregado, nome do empregado e quantidade de horas de trabalho do empregado alocadas ao projeto.
 * Relatório de empregados com dependentes incluindo as seguintes informações: rg do empregado, nome do empregado, nome do dependente, tipo de relação, data de nascimento do dependente e sexo do dependente.
