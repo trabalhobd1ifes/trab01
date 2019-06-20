@@ -442,6 +442,24 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
         group BY pessoa.nome;
 
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
+    /* usando left e rigth join*/
+
+    select produto.nome as nome_produto, tipo_produto.nome as tipo_prod from produto 
+    right join tipo_produto on (produto.fk_tipo_produto_id=tipo_produto.id);
+
+    select ingrediente.nome as ingrediente, tipo_ingrediente.nome as tipo_ingrediente from ingrediente
+    right join tipo_ingrediente on (ingrediente.fk_tipo_ingrediente_id=tipo_ingrediente.id);
+
+    /* ingrediente e ingrediente fronecimento(ingredientes fornecifos por alguem)*/
+    select  ingrediente.nome, ingrediente_fornecimento.id from ingrediente
+    left join ingrediente_fornecimento on (ingrediente.id=ingrediente_fornecimento.fk_ingrediente_id)
+
+    select  fornecedor.nome,ingrediente_fornecimento.id from fornecedor
+    right join ingrediente_fornecimento on (ingrediente_fornecimento.fk_fornecedor_id=fornecedor.id)
+
+    select status.nome, pedido.id as pedido_id from pedido
+    right join status on (status.id=pedido.fk_status_id)
+    arquivo com o resultado das consultas : https://github.com/trabalhobd1ifes/trab01/blob/master/consulta_9.8.rtf
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
         /*seleciona todas as pessoas que o nome começa com a letra j*/
@@ -456,6 +474,17 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
         select * from contato where email like '%gmail.com%';
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
+
+select pessoa.nome, compra_debita.valor_pago,pessoa.sexo from pessoa
+join compra_debita on (pessoa.id= compra_debita.fk_pessoa_id)
+where sexo in ('F');
+
+select * from produto where fk_tipo_produto_id in (select fk_tipo_produto_id from produto where fk_tipo_produto_id = '1' );
+
+
+select * from pedido where valor in (select valor from produto where valor >'10');
+
+arquivo com o resultado das consultas :https://github.com/trabalhobd1ifes/trab01/blob/master/consulta_9.10.rtf
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 Link do slide da apresentação: https://prezi.com/view/SwY6QrNtQ0YuKlqOXBct/ 
 
