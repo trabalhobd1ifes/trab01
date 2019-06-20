@@ -475,16 +475,16 @@ https://github.com/trabalhobd1ifes/trab01/blob/master/criacao_bd_endgame.sql
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 
-select pessoa.nome, compra_debita.valor_pago,pessoa.sexo from pessoa
-join compra_debita on (pessoa.id= compra_debita.fk_pessoa_id)
-where sexo in ('F');
+       select pessoa.nome, compra_debita.valor_pago,pessoa.sexo from pessoa
+       join compra_debita on (pessoa.id= compra_debita.fk_pessoa_id)
+       where sexo in ('F');
 
-select * from produto where fk_tipo_produto_id in (select fk_tipo_produto_id from produto where fk_tipo_produto_id = '1' );
+       select * from produto where fk_tipo_produto_id in (select fk_tipo_produto_id from produto where fk_tipo_produto_id = '1' );
 
 
-select * from pedido where valor in (select valor from produto where valor >'10');
+       select * from pedido where valor in (select valor from produto where valor >'10');
 
-arquivo com o resultado das consultas :https://github.com/trabalhobd1ifes/trab01/blob/master/consulta_9.10.rtf
+       arquivo com o resultado das consultas :https://github.com/trabalhobd1ifes/trab01/blob/master/consulta_9.10.rtf
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 Link do slide da apresentação: https://prezi.com/view/SwY6QrNtQ0YuKlqOXBct/ 
 
