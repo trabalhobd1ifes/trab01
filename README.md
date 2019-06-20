@@ -51,7 +51,7 @@ Arquivo PDF do Protótipo Balsamiq para o sistema SUMEI <br>
  
 #### 4.2 TABELA DE DADOS DO SISTEMA:
 ![Alt text](https://github.com/trabalhobd1ifes/trab01/blob/master/TABELA%20BD1.PNG) <br>
-![Exemplo de Tabela de dados SUMEI](https://github.com/trabalhobd1ifes/trab01/blob/master/Tabela%20selecionada.xlsx "Tabela - SUMEI")
+[Exemplo de Tabela de dados SUMEI](https://github.com/trabalhobd1ifes/trab01/blob/master/Tabela%20selecionada.xlsx "Tabela - SUMEI")
 
 ### 5.MODELO CONCEITUAL<br>
 
